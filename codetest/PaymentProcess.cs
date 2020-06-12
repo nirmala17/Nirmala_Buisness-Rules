@@ -29,6 +29,13 @@ namespace codetest
             // Payment for Book call book class
             // payment for Membership/Upgrade call Membership class
             // payment for Video call Video class
+
+            if(ordername=="")
+            {
+                throw new ArgumentNullException();
+                    
+                    
+            }
             switch (ordername)
             {
 
@@ -58,4 +65,6 @@ namespace codetest
 
 
     }
+
+  
 }

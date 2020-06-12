@@ -15,6 +15,15 @@ namespace codetest
         {
             PayCommission();
             //after paying commision 
+            // //generating  packing slip 
+            string PackingslipNo="1234";// orginal packing slip no
+            dupilicateGenaratePackingSlip(PackingslipNo);
+        }
+        //
+        public void dupilicateGenaratePackingSlip(string packingslipno)
+        {
+            
+           
             // //generating duplicate packing slip based on order name  intimate for royal department
 
         }

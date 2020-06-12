@@ -15,7 +15,7 @@ namespace codetest
             switch (type)
             {
                 case "learningto Ski":
-                    Addvideo();
+                    Addvideo(ordername);
                     break;
                 default:
                     GenaratePackingSlip(ordername);
@@ -29,7 +29,7 @@ namespace codetest
             GenaratePackingSlip(ordername);
         }
 
-        public void GeneratePackingSlip(string ordername)
+        public void GenaratePackingSlip(string ordername)
         {
             //generating packing slip based on order name
 

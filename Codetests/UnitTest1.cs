@@ -1,4 +1,5 @@
 ﻿using System;
+using codetest;
 using codetest.Properties;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -15,7 +16,7 @@ namespace Codetests
         [TestMethod]
         public void TestPaymentProcess()
         {
-            PaymentProcess
+            PaymentProcess PS = new PaymentProcess();
             string ordername = "Book";
             Ps.ShipingService(ordername);
         }

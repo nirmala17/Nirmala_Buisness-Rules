@@ -15,6 +15,7 @@ namespace codetest
         {
 
             PayCommission();
+         
         }
         public void PayCommission()
         {
