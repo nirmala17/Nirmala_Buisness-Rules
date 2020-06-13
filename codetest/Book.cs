@@ -11,26 +11,32 @@ namespace codetest
         { }
 
        
-        public void GenaratePackingSlip(string  ordername)
+        public bool GenaratePackingSlip(string  ordername)
         {
             PayCommission();
             //after paying commision 
             // //generating  packing slip 
+
+            
             string PackingslipNo="1234";// orginal packing slip no
+            Console.WriteLine("Packing Slip generated Sucessfully");
             dupilicateGenaratePackingSlip(PackingslipNo);
+            return true;
         }
         //
         public void dupilicateGenaratePackingSlip(string packingslipno)
         {
-            
-           
-            // //generating duplicate packing slip based on order name  intimate for royal department
+
+            Console.WriteLine("Duplicate  Packing Slip is generated and sent to royal department");
+          
 
         }
 
-        public void PayCommission()
+        public bool PayCommission()
         {
             //paying comission foragent
+            Console.WriteLine("Commission is Payed Agent Sucessfully");
+            return true;
         }
     }
 }

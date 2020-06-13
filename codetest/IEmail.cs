@@ -8,6 +8,6 @@ namespace codetest
 {
     interface IEmail
     {
-        void SendEmail();
+        bool SendEmail();
     }
 }

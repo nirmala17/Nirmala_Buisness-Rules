@@ -11,14 +11,18 @@ namespace codetest
         {
         }
 
-        public void GenaratePackingSlip(string ordername)
+        public bool GenaratePackingSlip(string ordername)
         {
 
             PayCommission();
-         
+            Console.WriteLine("Packing Slip generated Sucessfully");
+            return true;
+
         }
-        public void PayCommission()
+        public bool  PayCommission()
         {
+            Console.WriteLine("Commission is Payed Agent Sucessfully");
+            return true;
         }
     }
 }

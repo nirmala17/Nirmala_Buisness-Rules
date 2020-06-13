@@ -5,26 +5,32 @@ using System.Web;
 
 namespace codetest
 {
-    public class MemberShip:IMembership
+    public class MemberShip:IMembership,IEmail
     {
        public MemberShip() { }
 
-        public void NewMemberShip()
+        public bool NewMemberShip()
         {
             // for new membership
             //Activate memebership
+            Console.WriteLine("User Membership is Activated");
             SendEmail();
+            return true;
         }
 
-        public void UpgradeMemberShip()
+        public bool UpgradeMemberShip()
         {
             //upgrade membership
+            Console.WriteLine("User Membership is Upgraded");
             SendEmail();
+            return true;
         }
 
-        public void SendEmail()
+        public bool SendEmail()
         {
             // send a email using smtp server
+            Console.WriteLine("Mail Sent to  User  regarding  Activating/Upgrading Membership");
+            return true;
         }
     }
 }

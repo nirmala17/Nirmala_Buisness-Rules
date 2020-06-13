@@ -9,30 +9,28 @@ namespace Codeunittest
     {
       
 
-        [TestMethod]
-        public void TestPaymentProcess()
+    
+           [TestMethod]
+        public void  PaackingSlipforProduct()
         {
+            Paymentprocess p = new Paymentprocess();
 
-            
-                Paymentprocess p = new Paymentprocess();
-            try
-            {
-                p.ShipingService("");
-            }
-
-           catch(Exception ex)
-            {
-                return;
-            }
-
-            Assert.Fail();
-
-
-
+            bool isSuccessed = p.ShipingService("phsyical");
+                              
+            //Assert
+            Assert.IsTrue(isSuccessed);
         }
 
 
-       
+        [TestMethod]
+        public void PaackingSlipforBook()
+        {
+            Paymentprocess p = new Paymentprocess();
 
+            bool isSuccessed = p.ShipingService("Bo");
+
+            //Assert
+            Assert.IsTrue(isSuccessed);
+        }
     }
 }

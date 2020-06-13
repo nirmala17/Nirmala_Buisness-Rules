@@ -8,7 +8,7 @@ namespace codetest
 {
     interface IMembership
     {
-        void NewMemberShip();
-        void UpgradeMemberShip();
+        bool NewMemberShip();
+        bool UpgradeMemberShip();
     }
 }

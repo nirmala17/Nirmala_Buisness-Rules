@@ -8,6 +8,6 @@ namespace codetest
 {
     interface ICommission
     {
-        void PayCommission();
+        bool PayCommission();
     }
 }

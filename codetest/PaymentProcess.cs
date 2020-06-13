@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using codetest.Codetest.models;
 
 namespace codetest
 {
@@ -10,7 +11,6 @@ namespace codetest
     {
        
 
-        MemberShip objMem;
 
         public Paymentprocess()
         {
@@ -22,7 +22,9 @@ namespace codetest
         Book b = new Book();
         MemberShip M = new MemberShip();
         Video v = new Video();
-        public void ShipingService(string ordername)
+        Orders Or = new Orders();
+
+        public bool ShipingService(string ordername)
         {
           
             // Payment for Physical product call Product class
@@ -30,34 +32,29 @@ namespace codetest
             // payment for Membership/Upgrade call Membership class
             // payment for Video call Video class
 
-            if(ordername=="")
-            {
-                throw new ArgumentNullException();
-                    
-                    
-            }
-            switch (ordername)
+         
+            switch (Or.OrderName)
             {
 
                 case "Physical":
-                    p.GenaratePackingSlip(ordername);
-                    break;
+                  return  p.GenaratePackingSlip(Or.OrderName);
+                   
 
                 case "book":
-                    b.GenaratePackingSlip(ordername);
-                    break;
-                case "Membership":
-                    M.NewMemberShip();
-                    break;
-                case "UpgradeMembership":
-                    M.UpgradeMemberShip();
-                    break;
-                case "Video":
-                    v.VideoType("videotype",ordername);
-                    break;
-                default:
+                   return b.GenaratePackingSlip(Or.OrderName);
                   
-                    break;
+                case "Membership":
+                  return  M.NewMemberShip();
+                   
+                case "UpgradeMembership":
+                   return M.UpgradeMemberShip();
+                   
+                case "Video":
+                  return  v.VideoType("videotype", Or.OrderName);
+                   
+                default:
+
+                    return false;
             }
         
 

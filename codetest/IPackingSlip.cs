@@ -8,7 +8,7 @@ namespace codetest
 {
     interface IPackingSlip
     {
-        void GenaratePackingSlip(string ordername);
+        bool GenaratePackingSlip(string ordername);
 
         
 

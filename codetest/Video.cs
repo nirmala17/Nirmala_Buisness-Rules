@@ -10,7 +10,7 @@ namespace codetest
         public Video()
         { }
 
-        public void VideoType(string type, string ordername)
+        public bool VideoType(string type, string ordername)
         {
             switch (type)
             {
@@ -21,17 +21,23 @@ namespace codetest
                     GenaratePackingSlip(ordername);
                     break;
             }
+            return true;
         }
 
-        public void Addvideo(string ordername)
+        public bool Addvideo(string ordername)
         {
             //Add free Add video
+
+            Console.WriteLine("Free First Aid video Added Sucessfully");
             GenaratePackingSlip(ordername);
+            return true;
         }
 
-        public void GenaratePackingSlip(string ordername)
+        public bool GenaratePackingSlip(string ordername)
         {
             //generating packing slip based on order name
+            Console.WriteLine("Packing Slip genaerated Sucessfully");
+            return true;
 
         }
     }

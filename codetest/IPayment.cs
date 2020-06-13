@@ -8,6 +8,6 @@ namespace codetest
 {
     interface IPayment
     {
-         void ShipingService(string ordername);
+         bool ShipingService(string ordername);
     }
 }
